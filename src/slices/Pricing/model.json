@@ -1,0 +1,210 @@
+{
+  "id": "pricing",
+  "type": "SharedSlice",
+  "name": "Pricing",
+  "description": "Pricing",
+  "variations": [
+    {
+      "id": "table",
+      "name": "Table",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Table",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Heading",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "single": "heading2"
+          }
+        },
+        "plans": {
+          "type": "Group",
+          "config": {
+            "label": "Plans",
+            "repeat": true,
+            "fields": {
+              "plan": {
+                "type": "Link",
+                "config": {
+                  "label": "Plan",
+                  "select": "document",
+                  "repeat": false,
+                  "customtypes": [
+                    {
+                      "id": "pricing_plan",
+                      "fields": [
+                        {
+                          "id": "features",
+                          "fields": [
+                            {
+                              "id": "feature",
+                              "customtypes": [
+                                {
+                                  "id": "pricing_plan_feature",
+                                  "fields": [
+                                    "title",
+                                    "description"
+                                  ]
+                                }
+                              ]
+                            },
+                            "description"
+                          ]
+                        },
+                        "title",
+                        "price_monthly",
+                        "price_yearly",
+                        "call_to_action",
+                        "highlighted"
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "groups": {
+          "type": "Group",
+          "config": {
+            "label": "Groups",
+            "repeat": true,
+            "fields": {
+              "group": {
+                "type": "Link",
+                "config": {
+                  "label": "Group",
+                  "select": "document",
+                  "repeat": false,
+                  "customtypes": [
+                    {
+                      "id": "pricing_plan_group",
+                      "fields": [
+                        "title",
+                        {
+                          "id": "features",
+                          "fields": [
+                            {
+                              "id": "feature",
+                              "customtypes": [
+                                {
+                                  "id": "pricing_plan_feature",
+                                  "fields": [
+                                    "title",
+                                    "description"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "cards",
+      "name": "Cards",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Table",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Heading",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "single": "heading2"
+          }
+        },
+        "plans": {
+          "type": "Group",
+          "config": {
+            "label": "Plans",
+            "repeat": true,
+            "fields": {
+              "plan": {
+                "type": "Link",
+                "config": {
+                  "label": "Plan",
+                  "select": "document",
+                  "repeat": false,
+                  "customtypes": [
+                    {
+                      "id": "pricing_plan",
+                      "fields": [
+                        "title",
+                        "price_monthly",
+                        "price_yearly",
+                        "call_to_action",
+                        {
+                          "id": "features",
+                          "fields": [
+                            "description",
+                            {
+                              "id": "feature",
+                              "customtypes": [
+                                {
+                                  "id": "pricing_plan_feature",
+                                  "fields": [
+                                    "title",
+                                    "description"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        "highlighted"
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "features": {
+          "type": "Group",
+          "config": {
+            "label": "Features",
+            "repeat": true,
+            "fields": {
+              "feature": {
+                "type": "Link",
+                "config": {
+                  "label": "Feature",
+                  "select": "document",
+                  "repeat": false,
+                  "customtypes": [
+                    {
+                      "id": "pricing_plan_feature",
+                      "fields": [
+                        "title",
+                        "description"
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "format": "custom",
+  "id": "pricing_plan",
+  "label": "Pricing Plan",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "UID"
+        }
+      },
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Title",
+          "placeholder": ""
+        }
+      },
+      "price_monthly": {
+        "type": "Number",
+        "config": {
+          "label": "Price Monthly",
+          "placeholder": ""
+        }
+      },
+      "price_yearly": {
+        "type": "Number",
+        "config": {
+          "label": "Price Yearly",
+          "placeholder": ""
+        }
+      },
+      "features": {
+        "type": "Group",
+        "config": {
+          "label": "Features",
+          "repeat": true,
+          "fields": {
+            "feature": {
+              "type": "Link",
+              "config": {
+                "label": "Feature",
+                "select": "document",
+                "repeat": false,
+                "customtypes": ["pricing_plan_feature"]
+              }
+            },
+            "description": {
+              "type": "Text",
+              "config": {
+                "label": "Description",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      },
+      "call_to_action": {
+        "type": "Link",
+        "config": {
+          "label": "Call to action",
+          "placeholder": "",
+          "select": null,
+          "allowTargetBlank": true,
+          "allowText": true,
+          "repeat": false
+        }
+      },
+      "highlighted": {
+        "type": "Boolean",
+        "config": {
+          "label": "Highlighted",
+          "placeholder_false": "No",
+          "placeholder_true": "Yes",
+          "default_value": false
+        }
+      }
+    }
+  }
+}

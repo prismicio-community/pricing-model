@@ -1,0 +1,47 @@
+{
+  "format": "custom",
+  "id": "pricing_plan_group",
+  "label": "Pricing Plan Group",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "UID"
+        }
+      },
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Title",
+          "placeholder": ""
+        }
+      },
+      "features": {
+        "type": "Group",
+        "config": {
+          "label": "Features",
+          "repeat": true,
+          "fields": {
+            "feature": {
+              "type": "Link",
+              "config": {
+                "label": "Feature",
+                "select": "document",
+                "repeat": false,
+                "customtypes": [
+                  {
+                    "id": "pricing_plan_feature",
+                    "fields": ["title", "description"]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
